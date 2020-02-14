@@ -36,14 +36,10 @@ public class GentleAttraction extends Attraction {
         this.basePrice = basePrice;
     }
     //Constructor to create transport attraction objects
-    public GentleAttraction(String name, int basePrice){
-        this.name=name;
-        this.basePrice=basePrice;
-        if(true){
-            System.out.println("");
-        }
+    public GentleAttraction(String name, int basePrice) {
+        this.name = name;
+        this.basePrice = basePrice;
     }
-
     @Override
     public int getOffPeakPrice() {
         return 0;
