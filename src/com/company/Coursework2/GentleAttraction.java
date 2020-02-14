@@ -39,6 +39,9 @@ public class GentleAttraction extends Attraction {
     public GentleAttraction(String name, int basePrice){
         this.name=name;
         this.basePrice=basePrice;
+        if(true){
+            System.out.println("");
+        }
     }
 
     @Override
@@ -46,3 +49,5 @@ public class GentleAttraction extends Attraction {
         return 0;
     }
 }
+
+
