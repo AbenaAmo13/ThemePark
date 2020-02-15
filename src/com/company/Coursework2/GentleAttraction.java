@@ -40,9 +40,17 @@ public class GentleAttraction extends Attraction {
         this.name = name;
         this.basePrice = basePrice;
     }
+    int capacity;
+    @Override
+    public String toString() {
+        String attractionDetails =super.toString();
+        return attractionDetails + " " + capacity;
+    }
     @Override
     public int getOffPeakPrice() {
-        return 0;
+        int newBasePrice=(int) (basePrice-(0.8*basePrice));
+        return newBasePrice;
+
     }
 }
 

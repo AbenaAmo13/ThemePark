@@ -40,9 +40,17 @@ public class TransportAttraction extends Attraction {
         this.name=name;
         this.basePrice=basePrice;
     }
+    int distance;
+    @Override
+    public String toString() {
+        String attractionDetails =super.toString();
+        return attractionDetails + " " + distance;
+    }
+
 
     @Override
     public int getOffPeakPrice() {
-        return 0;
+        int newBasePrice = basePrice/2;
+        return newBasePrice;
     }
 }

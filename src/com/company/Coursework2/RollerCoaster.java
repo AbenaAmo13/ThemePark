@@ -35,14 +35,31 @@ public class RollerCoaster extends Attraction {
     public void setBasePrice(int basePrice) {
         this.basePrice = basePrice;
     }
+    int minAge;
+    public int getMinAge() {
+        return minAge;
+    }
+
+    float topSpeed;
+    public float getTopSpeed(){
+        return topSpeed;
+    }
     //Constructor to create transport attraction objects
     public RollerCoaster(String name, int basePrice){
         this.name=name;
         this.basePrice=basePrice;
     }
+    //toString method:
+
+
+    @Override
+    public String toString() {
+        String attractionDetails =super.toString();
+        return attractionDetails + " " + minAge + " " + topSpeed;
+    }
 
     @Override
     public int getOffPeakPrice() {
-        return 0;
+          return basePrice;
     }
 }
