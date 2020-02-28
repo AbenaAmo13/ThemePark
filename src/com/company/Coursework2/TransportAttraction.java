@@ -14,6 +14,8 @@ package com.company.Coursework2;
 
  Copyright   : (c) Abena Serwaa Johene Amo
 
+ NB: Do not forget to do test harness.
+
  ******************************************************************************/
 
 public class TransportAttraction extends Attraction {

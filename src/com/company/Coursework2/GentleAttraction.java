@@ -1,4 +1,7 @@
 package com.company.Coursework2;
+
+import java.util.ArrayList;
+
 /******************************************************************************
 
  File        : TransportAttraction.java
@@ -17,6 +20,7 @@ package com.company.Coursework2;
  ******************************************************************************/
 
 public class GentleAttraction extends Attraction {
+   ArrayList gentleAttractions = new ArrayList();
     String name;
     //Accessor method for name
     public String getName() {
@@ -50,6 +54,10 @@ public class GentleAttraction extends Attraction {
     public int getOffPeakPrice() {
         int newBasePrice=(int) (basePrice-(0.8*basePrice));
         return newBasePrice;
+
+    }
+    public static void main(String[] args) {
+
 
     }
 }

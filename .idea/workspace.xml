@@ -1,11 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="cd9d066a-4046-4712-b1e6-80cfbc317999" name="Default Changelist" comment="Removed if statement">
+    <list default="true" id="cd9d066a-4046-4712-b1e6-80cfbc317999" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/com/company/Coursework2/AgeRestrictionException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/company/Coursework2/Customer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/company/Coursework2/InsufficientBalanceException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/transactions.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/company/Coursework2/Attraction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/Coursework2/Attraction.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/company/Coursework2/GentleAttraction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/Coursework2/GentleAttraction.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/company/Coursework2/RollerCoaster.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/Coursework2/RollerCoaster.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/company/Coursework2/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/Coursework2/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/company/Coursework2/TransportAttraction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/Coursework2/TransportAttraction.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -24,17 +28,47 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="ProjectId" id="1Xj2YPnlwMLvVgg1nYU5XJvIgNA" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showExcludedFiles" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$USER_HOME$/IdeaProjects/FinalCoursework" />
     <property name="settings.editor.selected.configurable" value="vcs.Git" />
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Application.Customer">
+    <configuration name="Customer" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.company.Coursework2.Customer" />
+      <module name="ThemePark" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.company.Coursework2.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="InsufficientBalanceException" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.company.Coursework2.InsufficientBalanceException" />
+      <module name="ThemePark" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.company.Coursework2.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="Main" type="Application" factoryName="Application" temporary="true">
       <option name="MAIN_CLASS_NAME" value="com.company.Coursework2.Main" />
       <module name="ThemePark" />
@@ -45,6 +79,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.Customer" />
+        <item itemvalue="Application.InsufficientBalanceException" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="ServiceViewManager">
     <option name="viewStates">
@@ -83,7 +123,14 @@
       <option name="project" value="LOCAL" />
       <updated>1581694769968</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Removed if statement">
+      <created>1581772947984</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1581772947984</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -100,6 +147,7 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="Added if" />
     <MESSAGE value="Removed if statement" />
     <option name="LAST_COMMIT_MESSAGE" value="Removed if statement" />
@@ -109,14 +157,46 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="0" y="129" key="#com.intellij.ide.util.MemberChooser/0.0.1366.728@0.0.1366.728" timestamp="1581771417678" />
-    <state x="337" y="0" key="CommitChangelistDialog2" timestamp="1581772878153">
+    <state x="337" y="0" key="CommitChangelistDialog2" timestamp="1581772945500">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="337" y="0" key="CommitChangelistDialog2/0.0.1366.728@0.0.1366.728" timestamp="1581772878153" />
-    <state x="463" y="118" key="FileChooserDialogImpl" timestamp="1581694122578">
+    <state x="337" y="0" key="CommitChangelistDialog2/0.0.1366.728@0.0.1366.728" timestamp="1581772945500" />
+    <state x="463" y="118" key="FileChooserDialogImpl" timestamp="1582903547814">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="463" y="118" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1581694122578" />
+    <state x="463" y="118" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1582903547814" />
+    <state width="1323" height="482" key="GridCell.Tab.0.bottom" timestamp="1582903033585">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1323" height="482" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1582903033585" />
+    <state width="1323" height="482" key="GridCell.Tab.0.center" timestamp="1582903033585">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1323" height="482" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1582903033585" />
+    <state width="1323" height="482" key="GridCell.Tab.0.left" timestamp="1582903033585">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1323" height="482" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1582903033585" />
+    <state width="1323" height="482" key="GridCell.Tab.0.right" timestamp="1582903033585">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1323" height="482" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1582903033585" />
+    <state width="1323" height="214" key="GridCell.Tab.1.bottom" timestamp="1582585829970">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1323" height="214" key="GridCell.Tab.1.bottom/0.0.1366.728@0.0.1366.728" timestamp="1582585829970" />
+    <state width="1323" height="214" key="GridCell.Tab.1.center" timestamp="1582585829969">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1323" height="214" key="GridCell.Tab.1.center/0.0.1366.728@0.0.1366.728" timestamp="1582585829969" />
+    <state width="1323" height="214" key="GridCell.Tab.1.left" timestamp="1582585829969">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1323" height="214" key="GridCell.Tab.1.left/0.0.1366.728@0.0.1366.728" timestamp="1582585829969" />
+    <state width="1323" height="214" key="GridCell.Tab.1.right" timestamp="1582585829970">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1323" height="214" key="GridCell.Tab.1.right/0.0.1366.728@0.0.1366.728" timestamp="1582585829970" />
     <state x="184" y="6" key="SettingsEditor" timestamp="1581771905062">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
@@ -125,10 +205,10 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="275" y="96" key="Vcs.Push.Dialog.v2/0.0.1366.728@0.0.1366.728" timestamp="1581694791941" />
-    <state x="379" y="187" key="com.intellij.ide.util.TipDialog" timestamp="1581770017556">
+    <state x="379" y="187" key="com.intellij.ide.util.TipDialog" timestamp="1582896240722">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="379" y="187" key="com.intellij.ide.util.TipDialog/0.0.1366.728@0.0.1366.728" timestamp="1581770017556" />
+    <state x="379" y="187" key="com.intellij.ide.util.TipDialog/0.0.1366.728@0.0.1366.728" timestamp="1582896240722" />
     <state x="492" y="280" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1581771914037">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
@@ -137,5 +217,14 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="392" y="155" key="git4idea.merge.GitPullDialog/0.0.1366.728@0.0.1366.728" timestamp="1581694228912" />
+    <state x="65" y="0" key="new project wizard" timestamp="1582903536724">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="65" y="0" key="new project wizard/0.0.1366.728@0.0.1366.728" timestamp="1582903536724" />
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/ThemePark$Customer.ic" NAME="Customer Coverage Results" MODIFIED="1582583244779" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>com.company.Coursework2.*</FILTER>
+    </SUITE>
   </component>
 </project>

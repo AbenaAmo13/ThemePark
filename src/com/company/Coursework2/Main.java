@@ -3,6 +3,7 @@ package com.company.Coursework2;
 public class Main {
 
     public static void main(String[] args) {
-	// write your code here
+	// Read information about the Attraction
+
     }
 }

@@ -16,6 +16,7 @@ package com.company.Coursework2;
  ******************************************************************************/
 
 public  abstract class Attraction {
+
     String name;
     //Accessor method for name
     public String getName() {
