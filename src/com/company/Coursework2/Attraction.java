@@ -1,4 +1,7 @@
 package com.company.Coursework2;
+
+import org.w3c.dom.Attr;
+
 /******************************************************************************
 
  File        : Attraction.java
@@ -13,36 +16,53 @@ package com.company.Coursework2;
 
  Copyright   : (c) Abena Serwaa Johene Amo
 
+
+
  ******************************************************************************/
 
 public  abstract class Attraction {
-
+    //Declare variables and hafve accessors and mutators.
     String name;
-    //Accessor method for name
-    public String getName() {
-        return name;
-    }
-    //Mutator method to alter the name of an Attraction
+
     public void setName(String name) {
         this.name = name;
     }
-    int basePrice;
-    //Accessor method for base price
-    public int getBasePrice() {
-        return basePrice;
+
+    public String getName() {
+        return name;
     }
-    //Mutator method to alter the base price.
+
+    int basePrice;
+
     public void setBasePrice(int basePrice) {
         this.basePrice = basePrice;
     }
 
-    //toString method to Return variables in string format.
-    public String toString(){
-        return name +" "+ basePrice;
+    public int getBasePrice() {
+        return basePrice;
     }
 
+    //To store the type of Attraction in attractions.txt
+    String typeOfAttraction;
 
+    public String getTypeOfAttraction() {
+        return typeOfAttraction;
+    }
+    public void setTypeOfAttraction(String typeOfAttraction){}
 
-    public abstract int getOffPeakPrice();
+    public int getOffPeakPrice() {
+        return basePrice;
+    }
+    public Attraction(){}
 
+    public Attraction(String name, int basePrice, String typeOfAttraction){
+        this.name=name;
+        this.basePrice=basePrice;
+        this.typeOfAttraction=typeOfAttraction;
+    }
+    @Override
+    public String toString() {
+        return name + " " + basePrice + " " + typeOfAttraction;
+    }
 }
+

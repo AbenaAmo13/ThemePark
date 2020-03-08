@@ -1,9 +1,0 @@
-package com.company.Coursework2;
-
-public class Main {
-
-    public static void main(String[] args) {
-	// Read information about the Attraction
-
-    }
-}

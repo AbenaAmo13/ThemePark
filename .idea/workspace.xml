@@ -1,15 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="cd9d066a-4046-4712-b1e6-80cfbc317999" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/com/company/Coursework2/AgeRestrictionException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/company/Coursework2/Customer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/company/Coursework2/InsufficientBalanceException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/transactions.txt" afterDir="false" />
+    <list default="true" id="cd9d066a-4046-4712-b1e6-80cfbc317999" name="Default Changelist" comment="Worked on Customers.java">
+      <change afterPath="$PROJECT_DIR$/attractions.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/customers.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/company/Coursework2/ThemePark.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/company/Coursework2/Attraction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/Coursework2/Attraction.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/company/Coursework2/Customer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/Coursework2/Customer.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/company/Coursework2/GentleAttraction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/Coursework2/GentleAttraction.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/company/Coursework2/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/Coursework2/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/company/Coursework2/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/Coursework2/Simulation.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/company/Coursework2/RollerCoaster.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/Coursework2/RollerCoaster.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/company/Coursework2/TransportAttraction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/Coursework2/TransportAttraction.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -39,12 +40,26 @@
   <component name="PropertiesComponent">
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="last_opened_file_path" value="$USER_HOME$/IdeaProjects/FinalCoursework" />
+    <property name="ToolWindowRun.ShowToolbar" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="settings.editor.selected.configurable" value="vcs.Git" />
   </component>
   <component name="RunManager" selected="Application.Customer">
     <configuration name="Customer" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.company.Coursework2.Customer" />
+      <module name="ThemePark" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.company.Coursework2.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="GentleAttraction" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.company.Coursework2.GentleAttraction" />
       <module name="ThemePark" />
       <extension name="coverage">
         <pattern>
@@ -69,12 +84,28 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Main" type="Application" factoryName="Application" temporary="true">
-      <option name="MAIN_CLASS_NAME" value="com.company.Coursework2.Main" />
+    <configuration name="RollerCoaster" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.company.Coursework2.RollerCoaster" />
       <module name="ThemePark" />
-      <option name="WORKING_DIRECTORY" value="file://$PROJECT_DIR$" />
-      <RunnerSettings RunnerId="Run" />
-      <ConfigurationWrapper RunnerId="Run" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.company.Coursework2.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TransportAttraction" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.company.Coursework2.TransportAttraction" />
+      <module name="ThemePark" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.company.Coursework2.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -82,6 +113,9 @@
     <recent_temporary>
       <list>
         <item itemvalue="Application.Customer" />
+        <item itemvalue="Application.RollerCoaster" />
+        <item itemvalue="Application.TransportAttraction" />
+        <item itemvalue="Application.GentleAttraction" />
         <item itemvalue="Application.InsufficientBalanceException" />
       </list>
     </recent_temporary>
@@ -130,7 +164,14 @@
       <option name="project" value="LOCAL" />
       <updated>1581772947984</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Worked on use Attraction.java">
+      <created>1582905368188</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1582905368188</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -150,37 +191,43 @@
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="Added if" />
     <MESSAGE value="Removed if statement" />
-    <option name="LAST_COMMIT_MESSAGE" value="Removed if statement" />
+    <MESSAGE value="Worked on use Attraction.java" />
+    <MESSAGE value="Worked on Customers.java" />
+    <option name="LAST_COMMIT_MESSAGE" value="Worked on Customers.java" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="0" y="129" key="#com.intellij.ide.util.MemberChooser" timestamp="1581771417678">
+    <state x="0" y="129" key="#com.intellij.ide.util.MemberChooser" timestamp="1583512620393">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="0" y="129" key="#com.intellij.ide.util.MemberChooser/0.0.1366.728@0.0.1366.728" timestamp="1581771417678" />
-    <state x="337" y="0" key="CommitChangelistDialog2" timestamp="1581772945500">
+    <state x="0" y="129" key="#com.intellij.ide.util.MemberChooser/0.0.1366.728@0.0.1366.728" timestamp="1583512620393" />
+    <state x="430" y="255" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1" timestamp="1583017968399">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="337" y="0" key="CommitChangelistDialog2/0.0.1366.728@0.0.1366.728" timestamp="1581772945500" />
-    <state x="463" y="118" key="FileChooserDialogImpl" timestamp="1582903547814">
+    <state x="430" y="255" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1/0.0.1366.728@0.0.1366.728" timestamp="1583017968399" />
+    <state x="337" y="0" key="CommitChangelistDialog2" timestamp="1583704340334">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="463" y="118" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1582903547814" />
-    <state width="1323" height="482" key="GridCell.Tab.0.bottom" timestamp="1582903033585">
+    <state x="337" y="0" key="CommitChangelistDialog2/0.0.1366.728@0.0.1366.728" timestamp="1583704340334" />
+    <state x="463" y="118" key="FileChooserDialogImpl" timestamp="1583080383732">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="482" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1582903033585" />
-    <state width="1323" height="482" key="GridCell.Tab.0.center" timestamp="1582903033585">
+    <state x="463" y="118" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1583080383732" />
+    <state width="1323" height="482" key="GridCell.Tab.0.bottom" timestamp="1583704303653">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="482" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1582903033585" />
-    <state width="1323" height="482" key="GridCell.Tab.0.left" timestamp="1582903033585">
+    <state width="1323" height="482" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1583704303653" />
+    <state width="1323" height="482" key="GridCell.Tab.0.center" timestamp="1583704303653">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="482" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1582903033585" />
-    <state width="1323" height="482" key="GridCell.Tab.0.right" timestamp="1582903033585">
+    <state width="1323" height="482" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1583704303653" />
+    <state width="1323" height="482" key="GridCell.Tab.0.left" timestamp="1583704303652">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="482" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1582903033585" />
+    <state width="1323" height="482" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1583704303652" />
+    <state width="1323" height="482" key="GridCell.Tab.0.right" timestamp="1583704303653">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1323" height="482" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1583704303653" />
     <state width="1323" height="214" key="GridCell.Tab.1.bottom" timestamp="1582585829970">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
@@ -201,14 +248,14 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="184" y="6" key="SettingsEditor/0.0.1366.728@0.0.1366.728" timestamp="1581771905062" />
-    <state x="275" y="96" key="Vcs.Push.Dialog.v2" timestamp="1581694791941">
+    <state x="275" y="96" key="Vcs.Push.Dialog.v2" timestamp="1582905374411">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="275" y="96" key="Vcs.Push.Dialog.v2/0.0.1366.728@0.0.1366.728" timestamp="1581694791941" />
-    <state x="379" y="187" key="com.intellij.ide.util.TipDialog" timestamp="1582896240722">
+    <state x="275" y="96" key="Vcs.Push.Dialog.v2/0.0.1366.728@0.0.1366.728" timestamp="1582905374411" />
+    <state x="379" y="187" key="com.intellij.ide.util.TipDialog" timestamp="1582992509727">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="379" y="187" key="com.intellij.ide.util.TipDialog/0.0.1366.728@0.0.1366.728" timestamp="1582896240722" />
+    <state x="379" y="187" key="com.intellij.ide.util.TipDialog/0.0.1366.728@0.0.1366.728" timestamp="1582992509727" />
     <state x="492" y="280" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1581771914037">
       <screen x="0" y="0" width="1366" height="728" />
     </state>

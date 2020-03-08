@@ -20,7 +20,7 @@ public class RollerCoaster extends Attraction {
     String name;
     //Accessor method for name
     public String getName() {
-        return name;
+        return super.name;
     }
     //Mutator method to alter the name of an Attraction
     public void setName(String name) {
@@ -29,7 +29,7 @@ public class RollerCoaster extends Attraction {
     int basePrice;
     //Accessor method for base price
     public int getBasePrice() {
-        return basePrice;
+        return super.basePrice;
     }
     //Mutator method to alter the base price.
     public void setBasePrice(int basePrice) {
@@ -39,27 +39,53 @@ public class RollerCoaster extends Attraction {
     public int getMinAge() {
         return minAge;
     }
-
+    public void setMinAge(int minAge) {
+        this.minAge = minAge;
+    }
     float topSpeed;
     public float getTopSpeed(){
         return topSpeed;
     }
-    //Constructor to create transport attraction objects
-    public RollerCoaster(String name, int basePrice){
-        this.name=name;
-        this.basePrice=basePrice;
+    public void setTopSpeed(float topSpeed) {
+        this.topSpeed = topSpeed;
     }
-    //toString method:
 
+    String typeOfAttraction;
+    public String getTypeOfAttraction() {
+        return typeOfAttraction;
+    }
+    public void setTypeOfAttraction(String typeOfAttraction) {
+        this.typeOfAttraction=typeOfAttraction;
+    }
+    public int getOffPeakPrice() {
+        basePrice=getBasePrice();
+        return basePrice;
+    }
 
+    //toString method
     @Override
     public String toString() {
         String attractionDetails =super.toString();
         return attractionDetails + " " + minAge + " " + topSpeed;
     }
-
-    @Override
-    public int getOffPeakPrice() {
-          return basePrice;
+    //RollerCoaster constructor to create rollercoaster objects
+    public RollerCoaster(String name, int basePrice, String typeOfAttraction, int minAge, float topSpeed){
+        super(name,basePrice,typeOfAttraction);
+        this.minAge= minAge;
+        this.topSpeed=topSpeed;
     }
+    //Test harness
+    public static void main(String[] args){
+        //Test constructor and inheritance.
+        RollerCoaster rollercoaster1 = new RollerCoaster("R1", 200, "ROL", 12, 30);
+        //Testing access and mutators.
+        int originalMinAge = rollercoaster1.getMinAge();
+        rollercoaster1.setMinAge(22);
+        int testPeakPrice = rollercoaster1.getOffPeakPrice();
+        System.out.println(rollercoaster1+ "\n" +"Original Min Age before setting: "+originalMinAge +"\n"+ testPeakPrice);
+
+    }
+
+
+
 }

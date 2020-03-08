@@ -1,0 +1,21 @@
+Chair Lift@200@TRA@500
+Monorail@300@TRA@1000
+Steam Train@350@TRA@1000
+Hoverboat@400@TRA@300
+Peddle Boats@200@TRA@250
+Enchanted Bus@50@TRA@2000
+Merry-go-round@250@GEN@24
+Mini Golf@100@GEN@8
+Haunted House@100@GEN@12
+Ice Skating @500@GEN@20
+Ferris Wheel@250@GEN@24
+Pirate Ship@250@GEN@40
+Flying Saucers@200@GEN@15
+Shot of Fortune@150@GEN@4
+The Blind Drop@350@ROL@8@34.5
+Tower of Midnight@400@ROL@12@18.3
+Giga Coaster @400@ROL@15@52.4
+The Corkscrew@350@ROL@6@62.4
+Another Dimension@500@ROL@0@20
+Escape from CMP@600@ROL@21@88
+Plummet of Whispers@450@ROL@10@25.6
