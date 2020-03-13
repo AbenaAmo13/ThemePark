@@ -38,11 +38,11 @@ public class Customer {
     public void setName(String name) {
         this.name = name;
     }
-    int accountNumber;
-    public int getAccountNumber() {
+    String accountNumber;
+    public String getAccountNumber() {
         return accountNumber;
     }
-    public void setAccountNumber(int accountNumber) {
+    public void setAccountNumber(String accountNumber) {
         this.accountNumber = accountNumber;
     }
     int age;
@@ -67,7 +67,10 @@ public class Customer {
     public String getPersonalDiscountType() {
         return personalDiscountType;
     }
-    public void setPersonalDiscount(){}
+    public void setPersonalDiscountType(String personalDiscountType){
+        this.personalDiscountType=personalDiscountType;
+
+}
 
     //Method to add funds for customer
     public void addFunds(int amountToAdd){
@@ -75,8 +78,23 @@ public class Customer {
         // Add Funds to customer
         }
     //First useAttraction
-    public void useAttraction(int attractionPrice ) throws InsufficientBalanceException{ }
+    public void useAttraction(int attractionPrice ) throws InsufficientBalanceException{
+    }
+    //Overload use Attraction
+    public void useAttraction(int attractionPrice, int ageLimit) throws InsufficientBalanceException, AgeRestrictionException{
+        //Get the attraction name from transactions.
 
+        //Get the base Price from the attraction txt
+
+        //Get the kind of Price (standard/offpeak)
+
+        //Get the account number to check if thre are personal discounts
+
+        //Get the personal discount if any.
+
+        //Apply all discounts to base Price.
+        //
+    }
     //Method to return available discount Info.
     public static String getAvailableDiscount(){
         String infoDiscount="";
@@ -86,7 +104,7 @@ public class Customer {
         return name +" " + age + " " + accountNumber + " " + personalDiscountType +" "+ accountBalance;
     }
     //Creating Constructors for Customers
-    public Customer(int accountNumber, String name, int age, int accountBalance, String personalDiscountType){
+    public Customer(String accountNumber, String name, int age, int accountBalance, String personalDiscountType){
         this.accountNumber=accountNumber;
         this.name=name;
         this.age=age;
@@ -96,9 +114,10 @@ public class Customer {
     //Test harness
     public static void main(String[] args){
         //Testing constructor, acessors and mutators.
-        Customer Destiny = new Customer(100288, "Destiny",20, 200, "Family" );
-       int destinysBalance= Destiny.getAccountBalance();
-
+        Customer Destiny = new Customer("100288", "Destiny",20, 200, "Family" );
+        int destinysBalance= Destiny.getAccountBalance();
+        //Set the personal discount type
+        Destiny.setPersonalDiscountType("Student");
         System.out.println(Destiny+"\n"+"Her account Balance is: "+destinysBalance);
 
     }
