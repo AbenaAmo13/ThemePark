@@ -20,7 +20,10 @@ package com.company.Coursework2;
  ******************************************************************************/
 
 public class TransportAttraction extends Attraction {
-    String name;
+    private String name;
+
+
+
     //Accessor method for name
     public String getName(){return super.name;};
 
@@ -28,7 +31,7 @@ public class TransportAttraction extends Attraction {
     public void setName(String name) {
         this.name = name;
     }
-    int basePrice;
+    private int basePrice;
     //Accessor method for base price
     public int getBasePrice() {
         return super.basePrice;
@@ -38,11 +41,11 @@ public class TransportAttraction extends Attraction {
         this.basePrice = basePrice;
     }
     //To store the type of Attraction in attractions.txt
-    String typeOfAttraction;
+    private String typeOfAttraction;
     public String getTypeOfAttraction(){
         return super.typeOfAttraction;}
         public void setTypeOfAttraction(String typeOfAttraction){}
-    int distance;
+    private int distance;
     public int getDistance() {
         return distance;
     }

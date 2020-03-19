@@ -1,13 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="cd9d066a-4046-4712-b1e6-80cfbc317999" name="Default Changelist" comment="Worked on Customers.java">
-      <change afterPath="$PROJECT_DIR$/src/com/company/Coursework2/CustomerNotFoundException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/company/Coursework2/RideNotFoundException.java" afterDir="false" />
+    <list default="true" id="cd9d066a-4046-4712-b1e6-80cfbc317999" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/company/Coursework2/AttractionNotFound.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/attractions.txt" beforeDir="false" afterPath="$PROJECT_DIR$/attractions.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/company/Coursework2/Attraction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/Coursework2/Attraction.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/company/Coursework2/Customer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/Coursework2/Customer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/company/Coursework2/CustomerNotFoundException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/Coursework2/CustomerNotFoundException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/company/Coursework2/RideNotFoundException.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/company/Coursework2/RollerCoaster.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/Coursework2/RollerCoaster.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/company/Coursework2/Simulation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/Coursework2/Simulation.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/company/Coursework2/ThemePark.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/Coursework2/ThemePark.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/company/Coursework2/TransportAttraction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/Coursework2/TransportAttraction.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -36,8 +42,16 @@
   <component name="PropertiesComponent">
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="settings.editor.selected.configurable" value="vcs.Git" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\abbya\Desktop\Git\ThemePark" />
+      <recent name="C:\Users\abbya\Desktop\Git\ThemePark\.idea" />
+      <recent name="C:\Users\abbya\Desktop\Git\ThemePark\src" />
+    </key>
   </component>
   <component name="RunManager" selected="Application.Simulation">
     <configuration name="Customer" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
@@ -173,7 +187,14 @@
       <option name="project" value="LOCAL" />
       <updated>1583704355939</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Completed createThemePark(): THE VISION">
+      <created>1584116785666</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1584116785666</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -195,7 +216,8 @@
     <MESSAGE value="Removed if statement" />
     <MESSAGE value="Worked on use Attraction.java" />
     <MESSAGE value="Worked on Customers.java" />
-    <option name="LAST_COMMIT_MESSAGE" value="Worked on Customers.java" />
+    <MESSAGE value="Completed createThemePark(): THE VISION" />
+    <option name="LAST_COMMIT_MESSAGE" value="Completed createThemePark(): THE VISION" />
   </component>
   <component name="WindowStateProjectService">
     <state x="0" y="129" key="#com.intellij.ide.util.MemberChooser" timestamp="1583512620393">
@@ -206,58 +228,58 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="430" y="255" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1/0.0.1366.728@0.0.1366.728" timestamp="1583017968399" />
-    <state x="337" y="0" key="CommitChangelistDialog2" timestamp="1584116755018">
+    <state x="337" y="0" key="CommitChangelistDialog2" timestamp="1584116782668">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="337" y="0" key="CommitChangelistDialog2/0.0.1366.728@0.0.1366.728" timestamp="1584116755018" />
+    <state x="337" y="0" key="CommitChangelistDialog2/0.0.1366.728@0.0.1366.728" timestamp="1584116782668" />
     <state x="463" y="118" key="FileChooserDialogImpl" timestamp="1583870428211">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="463" y="118" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1583870428211" />
-    <state width="1323" height="478" key="GridCell.Tab.0.bottom" timestamp="1584116755159">
+    <state width="1323" height="146" key="GridCell.Tab.0.bottom" timestamp="1584573241870">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="478" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1584116755159" />
-    <state width="1323" height="478" key="GridCell.Tab.0.center" timestamp="1584116755159">
+    <state width="1323" height="146" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1584573241870" />
+    <state width="1323" height="146" key="GridCell.Tab.0.center" timestamp="1584573241870">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="478" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1584116755159" />
-    <state width="1323" height="478" key="GridCell.Tab.0.left" timestamp="1584116755159">
+    <state width="1323" height="146" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1584573241870" />
+    <state width="1323" height="146" key="GridCell.Tab.0.left" timestamp="1584573241869">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="478" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1584116755159" />
-    <state width="1323" height="478" key="GridCell.Tab.0.right" timestamp="1584116755159">
+    <state width="1323" height="146" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1584573241869" />
+    <state width="1323" height="146" key="GridCell.Tab.0.right" timestamp="1584573241870">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="478" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1584116755159" />
-    <state width="1323" height="214" key="GridCell.Tab.1.bottom" timestamp="1582585829970">
+    <state width="1323" height="146" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1584573241870" />
+    <state width="1323" height="214" key="GridCell.Tab.1.bottom" timestamp="1584554536045">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="214" key="GridCell.Tab.1.bottom/0.0.1366.728@0.0.1366.728" timestamp="1582585829970" />
-    <state width="1323" height="214" key="GridCell.Tab.1.center" timestamp="1582585829969">
+    <state width="1323" height="214" key="GridCell.Tab.1.bottom/0.0.1366.728@0.0.1366.728" timestamp="1584554536045" />
+    <state width="1323" height="214" key="GridCell.Tab.1.center" timestamp="1584554536045">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="214" key="GridCell.Tab.1.center/0.0.1366.728@0.0.1366.728" timestamp="1582585829969" />
-    <state width="1323" height="214" key="GridCell.Tab.1.left" timestamp="1582585829969">
+    <state width="1323" height="214" key="GridCell.Tab.1.center/0.0.1366.728@0.0.1366.728" timestamp="1584554536045" />
+    <state width="1323" height="214" key="GridCell.Tab.1.left" timestamp="1584554536045">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="214" key="GridCell.Tab.1.left/0.0.1366.728@0.0.1366.728" timestamp="1582585829969" />
-    <state width="1323" height="214" key="GridCell.Tab.1.right" timestamp="1582585829970">
+    <state width="1323" height="214" key="GridCell.Tab.1.left/0.0.1366.728@0.0.1366.728" timestamp="1584554536045" />
+    <state width="1323" height="214" key="GridCell.Tab.1.right" timestamp="1584554536045">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="214" key="GridCell.Tab.1.right/0.0.1366.728@0.0.1366.728" timestamp="1582585829970" />
+    <state width="1323" height="214" key="GridCell.Tab.1.right/0.0.1366.728@0.0.1366.728" timestamp="1584554536045" />
     <state x="184" y="6" key="SettingsEditor" timestamp="1581771905062">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="184" y="6" key="SettingsEditor/0.0.1366.728@0.0.1366.728" timestamp="1581771905062" />
-    <state x="275" y="96" key="Vcs.Push.Dialog.v2" timestamp="1583704364820">
+    <state x="275" y="96" key="Vcs.Push.Dialog.v2" timestamp="1584116812084">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="275" y="96" key="Vcs.Push.Dialog.v2/0.0.1366.728@0.0.1366.728" timestamp="1583704364820" />
-    <state x="379" y="187" key="com.intellij.ide.util.TipDialog" timestamp="1583944386099">
+    <state x="275" y="96" key="Vcs.Push.Dialog.v2/0.0.1366.728@0.0.1366.728" timestamp="1584116812084" />
+    <state x="379" y="187" key="com.intellij.ide.util.TipDialog" timestamp="1584551456464">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="379" y="187" key="com.intellij.ide.util.TipDialog/0.0.1366.728@0.0.1366.728" timestamp="1583944386099" />
+    <state x="379" y="187" key="com.intellij.ide.util.TipDialog/0.0.1366.728@0.0.1366.728" timestamp="1584551456464" />
     <state x="492" y="280" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1581771914037">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
@@ -270,6 +292,10 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="65" y="0" key="new project wizard/0.0.1366.728@0.0.1366.728" timestamp="1582903536724" />
+    <state x="339" y="17" width="670" height="676" key="search.everywhere.popup" timestamp="1584382890639">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="339" y="17" width="670" height="676" key="search.everywhere.popup/0.0.1366.728@0.0.1366.728" timestamp="1584382890639" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/ThemePark$Customer.ic" NAME="Customer Coverage Results" MODIFIED="1582583244779" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">

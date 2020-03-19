@@ -17,7 +17,7 @@ package com.company.Coursework2;
  ******************************************************************************/
 
 public class RollerCoaster extends Attraction {
-    String name;
+    private String name;
     //Accessor method for name
     public String getName() {
         return super.name;
@@ -26,7 +26,7 @@ public class RollerCoaster extends Attraction {
     public void setName(String name) {
         this.name = name;
     }
-    int basePrice;
+    private int basePrice;
     //Accessor method for base price
     public int getBasePrice() {
         return super.basePrice;
@@ -35,24 +35,24 @@ public class RollerCoaster extends Attraction {
     public void setBasePrice(int basePrice) {
         this.basePrice = basePrice;
     }
-    int minAge;
+    private int minAge;
     public int getMinAge() {
         return minAge;
     }
     public void setMinAge(int minAge) {
         this.minAge = minAge;
     }
-    float topSpeed;
-    public float getTopSpeed(){
+    private float topSpeed;
+    public double getTopSpeed(){
         return topSpeed;
     }
     public void setTopSpeed(float topSpeed) {
         this.topSpeed = topSpeed;
     }
 
-    String typeOfAttraction;
+    private String typeOfAttraction;
     public String getTypeOfAttraction() {
-        return typeOfAttraction;
+        return super.typeOfAttraction;
     }
     public void setTypeOfAttraction(String typeOfAttraction) {
         this.typeOfAttraction=typeOfAttraction;

@@ -22,7 +22,7 @@ import org.w3c.dom.Attr;
 
 public  abstract class Attraction {
     //Declare variables and hafve accessors and mutators.
-    String name;
+    protected String name;
 
     public void setName(String name) {
         this.name = name;
@@ -32,7 +32,7 @@ public  abstract class Attraction {
         return name;
     }
 
-    int basePrice;
+    protected int basePrice;
 
     public void setBasePrice(int basePrice) {
         this.basePrice = basePrice;
@@ -43,7 +43,7 @@ public  abstract class Attraction {
     }
 
     //To store the type of Attraction in attractions.txt
-    String typeOfAttraction;
+    protected String typeOfAttraction;
 
     public String getTypeOfAttraction() {
         return typeOfAttraction;
