@@ -2,13 +2,13 @@ package com.company.Coursework2;
 
 /******************************************************************************
 
-     File        : Customer.java
+     File        : Custome Description : Customer class to store information about Customers
+ r.java
 
  Date        : 12/02/2020
 
  Author      : Abena Serwaa Johene Amo
 
- Description : Customer class to store information about Customers
 
  History     : v 0.01
 
@@ -71,7 +71,7 @@ public class Customer {
     //First useAttraction
     public void useAttraction(int attractionPrice ){
         try{
-            if(attractionPrice < accountBalance){
+            if(accountBalance>= attractionPrice){
                 accountBalance=accountBalance-attractionPrice;
             }
             else{
@@ -80,24 +80,28 @@ public class Customer {
             System.out.println("Your account after use Attraction: "+ accountBalance) ;
 
         }
-        catch(Exception e){}
+        catch(Exception e){
+
+        }
     }
     //Overload use Attraction
-    public void useAttraction(int attractionPrice, int ageLimit){
+    public int useAttraction(int attractionPrice, int ageLimit){
         try{
             if(ageLimit>age){
                 throw new AgeRestrictionException();
             }
-            else if(attractionPrice < accountBalance){
+            else if(accountBalance>=attractionPrice){
                 accountBalance=accountBalance-attractionPrice;
             }
             else{
                 throw new InsufficientBalanceException();
+
             }
             System.out.println("Your account after use Attraction: "+ accountBalance) ;
 
         }
         catch(Exception e){}
+        return attractionPrice;
     }
     //Method to return available discount Info.
     public static String getAvailableDiscount(){

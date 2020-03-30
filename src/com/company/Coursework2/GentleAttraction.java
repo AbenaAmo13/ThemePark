@@ -54,7 +54,7 @@ public class GentleAttraction extends Attraction {
 
     public int getOffPeakPrice() {
         basePrice=getBasePrice();
-        basePrice=(int) (basePrice-(0.8*basePrice));
+        basePrice= (int) (0.8*basePrice);
         return basePrice;}
         //Constructor to create Gentle Attraction object
 
