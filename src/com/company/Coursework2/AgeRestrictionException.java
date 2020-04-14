@@ -15,12 +15,11 @@ import org.w3c.dom.ls.LSOutput;
  History     : v 0.01
 
  Copyright   : (c) Abena Serwaa Johene Amo
-
  ******************************************************************************/
 
 
 public class AgeRestrictionException extends Exception {
-    public AgeRestrictionException(){
+    public AgeRestrictionException() {
         System.out.println("You are below age limit. Sorry for the inconvenience. Please go on the other available rides");
     }
 }

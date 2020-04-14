@@ -1,12 +1,8 @@
 package com.company.Coursework2;
 
 import java.io.*;
-
-import java.util.ArrayList;
 import java.util.Scanner;
 
-
-import static java.lang.Integer.min;
 import static java.lang.Integer.parseInt;
 
 /******************************************************************************
@@ -28,14 +24,13 @@ public class Simulation {
     //Method to create the theme Park
     public static ThemePark createThemePark() throws IOException {
         //Variables for Customers
-        ArrayList tempCustomerArray = new ArrayList();
         String accountNo;
         String customerName;
         int age;
         int accountBalance;
         String discountType;
-        String noPersonalDiscountTypeCustomers[] = new String[5];
-        String RollerCoaster[] = new String[5];
+        String[] noPersonalDiscountTypeCustomers = new String[5];
+        String[] RollerCoaster = new String[5];
 
         //Variables for Attraction
         String attractionName;
@@ -57,20 +52,17 @@ public class Simulation {
             String customerLine;
             String attractionLine;
 
-
             while ((customerLine = customerInput.readLine()) != null) {
                 //Reading customer Details
                 String[] customerDetails;
                 customerDetails = customerLine.split("#");
-
                 int numberOfElements = customerDetails.length;
                 if (numberOfElements < 5) {
-                    for (int i = 0; i < customerDetails.length; i++) {
-                        noPersonalDiscountTypeCustomers[i] = customerDetails[i];
-
-                    }
+                    //This is to keep the array the same size and preventing index out of bounds error.
+                    //Copy the contents of customerDetails array into noPersonalDiscountTypeCustomers array.
+                    System.arraycopy(customerDetails, 0, noPersonalDiscountTypeCustomers, 0, customerDetails.length);
+                    //Place customer details into appropriate variables
                     accountNo = customerDetails[0];
-
                     customerName = customerDetails[1];
                     age = parseInt(customerDetails[2]);
                     accountBalance = parseInt(customerDetails[3]);
@@ -79,7 +71,6 @@ public class Simulation {
 
                 } else {
                     accountNo = customerDetails[0];
-
                     customerName = customerDetails[1];
                     age = parseInt(customerDetails[2]);
                     accountBalance = parseInt(customerDetails[3]);
@@ -95,7 +86,6 @@ public class Simulation {
                 //Reading attraction details
                 String[] attractionDetails;
                 attractionDetails = attractionLine.split("@");
-                int numberofElementAttractions = attractionDetails.length;
                 //Based on the type of attraction it is add ride to the theme park accordingly.
                 typeOfAttraction = attractionDetails[2];
                 switch (typeOfAttraction) {
@@ -117,9 +107,8 @@ public class Simulation {
                         break;
                     case "ROL":
                         //Using for loop to increase the size of the attractionDetails.
-                        for (int i = 0; i < attractionDetails.length; i++) {
-                            RollerCoaster[i] = attractionDetails[i];
-                        }
+                        //This is to prevent the index out of bounds error.
+                        System.arraycopy(attractionDetails, 0, RollerCoaster, 0, attractionDetails.length);
                         attractionName = attractionDetails[0].trim();
                         basePrice = Integer.parseInt(attractionDetails[1]);
                         typeOfAttraction = attractionDetails[2];
@@ -138,10 +127,11 @@ public class Simulation {
     }
 
 
-    //Simulate method to perform transactions in the trasnaction files.
+    //Simulate method to perform transactions in the transaction files.
     public static void Simulate(ThemePark newThemePark) throws IOException {
         newThemePark = createThemePark();
         //Read transaction file.
+        //Create all variables necessary for the methods.
         String transactions;
         String typeOfRide;
         String instruction;
@@ -154,27 +144,27 @@ public class Simulation {
         int age;
         int minAge;
         int accountBalance;
-        String personalDiscount = "";
+        String personalDiscount;
         int finalProfit = 0;
         String fileName = "transactions.txt";
-        int basePrice = 0;
+        int basePrice;
         //ArrayList to store information for all Use Attraction instructions.
-        ArrayList transactionsArray = new ArrayList();
         try {
             //Read all the useAttractionTransactions
-            File transactionFile = new File("transactions.txt");
+            File transactionFile = new File(fileName);
             Scanner transactionScanner = new Scanner(transactionFile);
             while (transactionScanner.hasNextLine()) {
                 transactions = transactionScanner.nextLine();
                 Scanner specificTransactionScanner = new Scanner(transactions).useDelimiter(",");
                 instruction = specificTransactionScanner.next();
-                Attraction transactionAttraction = null;
-                Customer transactionCustomer = null;
-                //Execute the transactions based on the specific word.
+                Attraction transactionAttraction;
+                Customer transactionCustomer;
+                //Execute the transactions based on the specific instruction
                 switch (instruction) {
-                    //If use attraction transaction
+                    //For the use attraction instruction
                     case "USE_ATTRACTION":
                         System.out.println("The transaction is: " + transactions);
+                        //Read the necessary information and store in variables.
                         typeOfPrice = specificTransactionScanner.next();
                         accountNumber = specificTransactionScanner.next();
                         rideName = specificTransactionScanner.next();
@@ -192,41 +182,25 @@ public class Simulation {
 
                             switch (personalDiscount) {
                                 case "None":
-                                    basePrice = basePrice;
                                     if (typeOfRide.equals("ROL")) {
                                         RollerCoaster rol = (RollerCoaster) transactionAttraction;
                                         minAge = rol.getMinAge();
                                         //Apply use attraction method for rollercoaster after getting necessary information to do so.
                                         transactionCustomer.useAttraction(basePrice, minAge);
-                                        accountBalance = transactionCustomer.getAccountBalance();
                                         //If the transaction balance doesn't change that means error was thrown hence
-                                        if (beforeTransactionBalance == accountBalance) {
-                                            //Do not add transaction to the total final profit.
-                                            finalProfit = finalProfit;
-                                            System.out.println("Total Profit: " + finalProfit);
-                                            System.out.println("\n");
-                                        } //If account balance after transaction is different from before transaction was executed
-                                        //That means that transaction was successful hence
-                                        else if (beforeTransactionBalance != accountBalance) {
-                                            //Add basePrice to the final profit.
-                                            finalProfit = finalProfit + basePrice;
-                                            System.out.println("Total Profit: " + finalProfit);
-                                            System.out.println("\n");
-                                        }
                                     } else {
                                         //Once it is not a roller coaster, use the other use attraction method.
                                         transactionCustomer.useAttraction(basePrice);
-                                        accountBalance = transactionCustomer.getAccountBalance();
-                                        if (beforeTransactionBalance == accountBalance) {
-                                            finalProfit = finalProfit;
-                                            System.out.println("Total Profit: " + finalProfit);
-                                            System.out.println("\n");
-                                        } else if (beforeTransactionBalance != accountBalance) {
-                                            finalProfit = finalProfit + basePrice;
-                                            System.out.println("Total Profit: " + finalProfit);
-                                            System.out.println("\n");
-                                        }
                                     }
+                                    accountBalance = transactionCustomer.getAccountBalance();
+                                    //If the customers balance before transaction is not the same as the one after
+                                    //That means that the transaction was successful hence base price should be added
+                                    //to over all profit.
+                                    if (beforeTransactionBalance != accountBalance) {
+                                        finalProfit = finalProfit + basePrice;
+                                    }
+                                    System.out.println("Total Profit: " + finalProfit);
+                                    System.out.println("\n");
 
                                     break;
                                 case "STUDENT":
@@ -237,30 +211,16 @@ public class Simulation {
                                         minAge = rol.getMinAge();
                                         // Apply Use attraction method for rollercoaster
                                         transactionCustomer.useAttraction(basePrice, minAge);
-                                        accountBalance = transactionCustomer.getAccountBalance();
-                                        if (beforeTransactionBalance == accountBalance) {
-                                            finalProfit = finalProfit;
-                                            System.out.println("Total Profit: " + finalProfit);
-                                            System.out.println("\n");
-                                        } else if (beforeTransactionBalance != accountBalance) {
-                                            finalProfit = finalProfit + basePrice;
-                                            System.out.println("Total Profit: " + finalProfit);
-                                            System.out.println("\n");
-                                        }
                                     } else {
                                         //Apply use attraction method for the other rides.
                                         transactionCustomer.useAttraction(basePrice);
-                                        accountBalance = transactionCustomer.getAccountBalance();
-                                        if (beforeTransactionBalance == accountBalance) {
-                                            finalProfit = finalProfit;
-                                            System.out.println("Total Profit: " + finalProfit);
-                                            System.out.println("\n");
-                                        } else if (beforeTransactionBalance != accountBalance) {
-                                            finalProfit = finalProfit + basePrice;
-                                            System.out.println("Total Profit: " + finalProfit);
-                                            System.out.println("\n");
-                                        }
                                     }
+                                    accountBalance = transactionCustomer.getAccountBalance();
+                                    if (beforeTransactionBalance != accountBalance) {
+                                        finalProfit = finalProfit + basePrice;
+                                    }
+                                    System.out.println("Total Profit: " + finalProfit);
+                                    System.out.println("\n");
 
                                     break;
                                 case "FAMILY":
@@ -274,18 +234,13 @@ public class Simulation {
                                     } else {
                                         //Apply use attraction for the other rides.
                                         transactionCustomer.useAttraction(basePrice);
-
                                     }
                                     accountBalance = transactionCustomer.getAccountBalance();
-                                    if (beforeTransactionBalance == accountBalance) {
-                                        finalProfit = finalProfit;
-                                        System.out.println("Total Profit: " + finalProfit);
-                                        System.out.println("\n");
-                                    } else if (beforeTransactionBalance != accountBalance) {
+                                    if (beforeTransactionBalance != accountBalance) {
                                         finalProfit = finalProfit + basePrice;
-                                        System.out.println("Total profit: " + finalProfit);
-                                        System.out.println("\n");
                                     }
+                                    System.out.println("Total profit: " + finalProfit);
+                                    System.out.println("\n");
 
                                     break;
 
@@ -295,171 +250,135 @@ public class Simulation {
                         } else {
                             //Get typeOfRide and place it in variable name "typeOfRide"
                             //Based on that apply the off peak price on the base price.
-                            //For rollercoasters, execute use attractions.
-                            if (typeOfRide.equals("ROL")) {
-                                RollerCoaster rol = (RollerCoaster) transactionAttraction;
-                                //Apply off peak price first.
-                                basePrice = rol.getOffPeakPrice();
-                                //Apply discounts if there are any.
-                                switch (personalDiscount) {
-                                    case "None":
-                                        basePrice = basePrice;
-                                        minAge = rol.getMinAge();
-                                        //Apply appropriate use attraction.
-                                        transactionCustomer.useAttraction(basePrice, minAge);
-                                        accountBalance = transactionCustomer.getAccountBalance();
-                                        //Check if there was a change in the customers' balance.
-                                        if (beforeTransactionBalance == accountBalance) {
-                                            //No change then exception was thrown.
-                                            // base price won't be added to final profit.
-                                            finalProfit = finalProfit;
-                                            System.out.println(finalProfit);
-                                            System.out.println("\n");
-                                        } //Change in account balance means transaction was successful.
-                                        else if (beforeTransactionBalance != accountBalance) {
-                                            //Add baseprice to finalprfit.
-                                            finalProfit = finalProfit + basePrice;
+                            //For roller coasters, execute use attractions.
+                            switch (typeOfRide) {
+                                case "ROL":
+                                    RollerCoaster rol = (RollerCoaster) transactionAttraction;
+                                    //Apply off peak price first.
+                                    basePrice = rol.getOffPeakPrice();
+                                    //Apply discounts if there are any.
+                                    switch (personalDiscount) {
+                                        case "None":
+                                            minAge = rol.getMinAge();
+                                            //Apply appropriate use attraction.
+                                            transactionCustomer.useAttraction(basePrice, minAge);
+                                            accountBalance = transactionCustomer.getAccountBalance();
+                                            if (beforeTransactionBalance != accountBalance) {
+                                                finalProfit = finalProfit + basePrice;
+                                            }
                                             System.out.println("Total profit: " + finalProfit);
                                             System.out.println("\n");
-                                        }
-                                        break;
-                                    case "STUDENT":
-                                        //Apply student discount.
-                                        basePrice = (int) (0.9 * basePrice);
-                                        minAge = rol.getMinAge();
-                                        transactionCustomer.useAttraction(basePrice, minAge);
-                                        accountBalance = transactionCustomer.getAccountBalance();
-                                        if (beforeTransactionBalance == accountBalance) {
-                                            finalProfit = finalProfit;
-                                            System.out.println(finalProfit);
-                                            System.out.println("\n");
-                                        } else if (beforeTransactionBalance != accountBalance) {
-                                            finalProfit = finalProfit + basePrice;
+                                            break;
+                                        case "STUDENT":
+                                            //Apply student discount.
+                                            basePrice = (int) (0.9 * basePrice);
+                                            minAge = rol.getMinAge();
+                                            transactionCustomer.useAttraction(basePrice, minAge);
+                                            accountBalance = transactionCustomer.getAccountBalance();
+                                            if (beforeTransactionBalance != accountBalance) {
+                                                finalProfit = finalProfit + basePrice;
+                                            }
                                             System.out.println("Total profit: " + finalProfit);
                                             System.out.println("\n");
-                                        }
-                                        break;
 
-                                    case "FAMILY":
-                                        basePrice = (int) (0.85 * basePrice);
-                                        minAge = rol.getMinAge();
-                                        transactionCustomer.useAttraction(basePrice, minAge);
-                                        accountBalance = transactionCustomer.getAccountBalance();
-                                        if (beforeTransactionBalance == accountBalance) {
-                                            finalProfit = finalProfit;
-                                            System.out.println(finalProfit);
-                                            System.out.println("\n");
-                                        } else if (beforeTransactionBalance != accountBalance) {
-                                            finalProfit = finalProfit + basePrice;
-                                            System.out.println("Total profit: " + finalProfit);
-                                            System.out.println("\n");
-                                        }
-                                        break;
-                                }
+                                            break;
 
-                            } else if (typeOfRide.equals("GEN")) {
-                                GentleAttraction gen = (GentleAttraction) transactionAttraction;
-                                basePrice = gen.getOffPeakPrice();
-                                switch (personalDiscount) {
-                                    case "None":
-                                        transactionCustomer.useAttraction(basePrice);
-                                        accountBalance = transactionCustomer.getAccountBalance();
-                                        if (beforeTransactionBalance == accountBalance) {
-                                            finalProfit = finalProfit;
+                                        case "FAMILY":
+                                            //Apply family discount.
+                                            basePrice = (int) (0.85 * basePrice);
+                                            minAge = rol.getMinAge();
+                                            transactionCustomer.useAttraction(basePrice, minAge);
+                                            accountBalance = transactionCustomer.getAccountBalance();
+                                            if (beforeTransactionBalance != accountBalance) {
+                                                finalProfit = finalProfit + basePrice;
+                                            }
                                             System.out.println("Total profit: " + finalProfit);
                                             System.out.println("\n");
-                                        } else if (beforeTransactionBalance != accountBalance) {
-                                            finalProfit = finalProfit + basePrice;
-                                            System.out.println("Total profit: " + finalProfit);
-                                            System.out.println("\n");
-                                        }
-                                        break;
-                                    case "STUDENT":
-                                        basePrice = (int) (0.9 * basePrice);
-                                        transactionCustomer.useAttraction(basePrice);
-                                        accountBalance = transactionCustomer.getAccountBalance();
-                                        if (beforeTransactionBalance == accountBalance) {
-                                            finalProfit = finalProfit;
-                                            System.out.println("Total profit: " + finalProfit);
-                                            System.out.println("\n");
-                                        } else if (beforeTransactionBalance != accountBalance) {
-                                            finalProfit = finalProfit + basePrice;
-                                            System.out.println("Total profit: " + finalProfit);
-                                            System.out.println("\n");
-                                        }
-                                        break;
+                                            break;
+                                    }
 
-                                    case "FAMILY":
-                                        basePrice = (int) (0.85 * basePrice);
-                                        transactionCustomer.useAttraction(basePrice);
-                                        accountBalance = transactionCustomer.getAccountBalance();
-                                        if (beforeTransactionBalance == accountBalance) {
-                                            finalProfit = finalProfit;
+                                    break;
+                                //Same principle for the previous rides applies for this ride.
+                                case "GEN":
+                                    GentleAttraction gen = (GentleAttraction) transactionAttraction;
+                                    basePrice = gen.getOffPeakPrice();
+                                    switch (personalDiscount) {
+                                        case "None":
+                                            transactionCustomer.useAttraction(basePrice);
+                                            accountBalance = transactionCustomer.getAccountBalance();
+                                            if (beforeTransactionBalance != accountBalance) {
+                                                finalProfit = finalProfit + basePrice;
+                                            }
                                             System.out.println("Total profit: " + finalProfit);
                                             System.out.println("\n");
-                                        } else if (beforeTransactionBalance != accountBalance) {
-                                            finalProfit = finalProfit + basePrice;
+                                            break;
+                                        case "STUDENT":
+                                            basePrice = (int) (0.9 * basePrice);
+                                            transactionCustomer.useAttraction(basePrice);
+                                            accountBalance = transactionCustomer.getAccountBalance();
+                                            if (beforeTransactionBalance != accountBalance) {
+                                                finalProfit = finalProfit + basePrice;
+                                            }
                                             System.out.println("Total profit: " + finalProfit);
                                             System.out.println("\n");
-                                        }
-                                        break;
-                                }
+                                            break;
 
-                            } else if (typeOfRide.equals("TRA")) {
-                                TransportAttraction tra = (TransportAttraction) transactionAttraction;
-                                basePrice = tra.getOffPeakPrice();
-                                System.out.println(basePrice);
-                                switch (personalDiscount) {
-                                    case "None":
-                                        transactionCustomer.useAttraction(basePrice);
-                                        accountBalance = transactionCustomer.getAccountBalance();
-                                        if (beforeTransactionBalance == accountBalance) {
-                                            finalProfit = finalProfit;
-                                            System.out.println("Total profit " + finalProfit);
-                                            System.out.println("\n");
-                                        } else if (beforeTransactionBalance != accountBalance) {
-                                            finalProfit = finalProfit + basePrice;
-                                            System.out.println("Total profit " + finalProfit);
-                                            System.out.println("\n");
-                                        }
-                                        break;
-                                    case "STUDENT":
-                                        basePrice = (int) (0.9 * basePrice);
-                                        transactionCustomer.useAttraction(basePrice);
-                                        accountBalance = transactionCustomer.getAccountBalance();
-                                        if (beforeTransactionBalance == accountBalance) {
-                                            finalProfit = finalProfit;
+                                        case "FAMILY":
+                                            basePrice = (int) (0.85 * basePrice);
+                                            transactionCustomer.useAttraction(basePrice);
+                                            accountBalance = transactionCustomer.getAccountBalance();
+                                            if (beforeTransactionBalance != accountBalance) {
+                                                finalProfit = finalProfit + basePrice;
+                                            }
                                             System.out.println("Total profit: " + finalProfit);
                                             System.out.println("\n");
-                                        } else if (beforeTransactionBalance != accountBalance) {
-                                            finalProfit = finalProfit + basePrice;
-                                            System.out.println("Total profit: " + finalProfit);
-                                            System.out.println("\n");
-                                        }
-                                        break;
+                                            break;
+                                    }
 
-                                    case "FAMILY":
-                                        basePrice = (int) (0.85 * basePrice);
-                                        transactionCustomer.useAttraction(basePrice);
-                                        accountBalance = transactionCustomer.getAccountBalance();
-                                        if (beforeTransactionBalance == accountBalance) {
-                                            finalProfit = finalProfit;
+                                    break;
+                                case "TRA":
+                                    TransportAttraction tra = (TransportAttraction) transactionAttraction;
+                                    basePrice = tra.getOffPeakPrice();
+                                    switch (personalDiscount) {
+                                        case "None":
+                                            transactionCustomer.useAttraction(basePrice);
+                                            accountBalance = transactionCustomer.getAccountBalance();
+                                            if (beforeTransactionBalance != accountBalance) {
+                                                finalProfit = finalProfit + basePrice;
+                                            }
                                             System.out.println("Total profit: " + finalProfit);
                                             System.out.println("\n");
-                                        } else if (beforeTransactionBalance != accountBalance) {
-                                            finalProfit = finalProfit + basePrice;
+                                            break;
+                                        case "STUDENT":
+                                            basePrice = (int) (0.9 * basePrice);
+                                            transactionCustomer.useAttraction(basePrice);
+                                            accountBalance = transactionCustomer.getAccountBalance();
+                                            if (beforeTransactionBalance != accountBalance) {
+                                                finalProfit = finalProfit + basePrice;
+                                            }
                                             System.out.println("Total profit: " + finalProfit);
                                             System.out.println("\n");
-                                        }
+                                            break;
 
-                                        break;
-                                }
+                                        case "FAMILY":
+                                            basePrice = (int) (0.85 * basePrice);
+                                            transactionCustomer.useAttraction(basePrice);
+                                            accountBalance = transactionCustomer.getAccountBalance();
+                                            if (beforeTransactionBalance != accountBalance) {
+                                                finalProfit = finalProfit + basePrice;
+                                            }
+                                            System.out.println("Total profit: " + finalProfit);
+                                            System.out.println("\n");
 
+                                            break;
+                                    }
+
+                                    break;
                             }
 
                         }
                         break;
-                        //Execute add funds transaction.
+                    //Execute add funds transaction.
                     case "ADD_FUNDS":
                         System.out.println("The transaction is: " + transactions);
                         accountNumber = specificTransactionScanner.next();
@@ -469,8 +388,9 @@ public class Simulation {
                         System.out.println("\n");
 
                         break;
-                    //Exeucte new customer transaction
+                    //Execute new customer transaction
                     case "NEW_CUSTOMER":
+                        //Get all necessary details to execute transaction.
                         System.out.println("The transaction is: " + transactions);
                         accountNumber = specificTransactionScanner.next();
                         customerName = specificTransactionScanner.next();
@@ -478,17 +398,16 @@ public class Simulation {
                         accountBalance = specificTransactionScanner.nextInt();
                         if (specificTransactionScanner.hasNext()) {
                             personalDiscount = specificTransactionScanner.next();
-                            newThemePark.AddCustomers(accountNumber, customerName, age, accountBalance, personalDiscount);
-                            //Apply getCustomer method
-                            transactionCustomer = newThemePark.getCustomer(accountNumber);
-                            System.out.println("\n");
 
                         } else {
                             personalDiscount = "None";
-                            newThemePark.AddCustomers(accountNumber, customerName, age, accountBalance, personalDiscount);
-                            transactionCustomer = newThemePark.getCustomer(accountNumber);
-                            System.out.println("\n");
                         }
+                        //Add customer to the theme park object
+                        //Apply getCustomer, so the new customer added can be printed out
+
+                        newThemePark.AddCustomers(accountNumber, customerName, age, accountBalance, personalDiscount);
+                        transactionCustomer = newThemePark.getCustomer(accountNumber);
+                        System.out.println("\n");
 
 
                 }

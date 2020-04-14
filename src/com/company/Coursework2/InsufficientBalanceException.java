@@ -14,23 +14,19 @@ package com.company.Coursework2;
  History     : v 0.01
 
  Copyright   : (c) Abena Serwaa Johene Amo
-
  ******************************************************************************/
 
 public class InsufficientBalanceException extends Exception {
 
-    public InsufficientBalanceException(){
+    public InsufficientBalanceException() {
 
         System.out.println("Balance is low. Recharge please.");
 
 
-
     }
 
 
-
-
-    }
+}
 
 
 

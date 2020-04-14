@@ -32,32 +32,28 @@ public class ThemePark {
         this.parkName = parkName;
     }
 
-    private ArrayList<Customer> customers = new ArrayList<Customer>();
+    private ArrayList<Customer> customers = new ArrayList<>();
 
-    private ArrayList<Attraction> attractions = new ArrayList<Attraction>();
+    private ArrayList<Attraction> attractions = new ArrayList<>();
 
-    //Method to add individual customers to the arraylist
-    public ArrayList<Customer> AddCustomers(String accountNumber, String name, int age, int accountBalance, String personalDiscountType) {
+    //Method to add individual customers to the array list
+    public void AddCustomers(String accountNumber, String name, int age, int accountBalance, String personalDiscountType) {
         customers.add(new Customer(accountNumber, name, age, accountBalance, personalDiscountType));
-        return customers;
     }
 
     //Method to add individual ride for all except roller coaster
-    public ArrayList<Attraction> AddTransportAttraction(String name, int basePrice, String rideType, int distance) {
+    public void AddTransportAttraction(String name, int basePrice, String rideType, int distance) {
         attractions.add(new TransportAttraction(name, basePrice, rideType, distance));
-        return attractions;
     }
 
     //Method to add individual ride for all except roller coaster
-    public ArrayList<Attraction> AddGentleAttraction(String name, int basePrice, String rideType, int capacity) {
+    public void AddGentleAttraction(String name, int basePrice, String rideType, int capacity) {
         attractions.add(new GentleAttraction(name, basePrice, rideType, capacity));
-        return attractions;
     }
 
     //Method to add individual ride for all except roller coaster
-    public ArrayList<Attraction> AddRollerCoasterRides(String name, int basePrice, String rideType, int minAge, float topSpeed) {
+    public void AddRollerCoasterRides(String name, int basePrice, String rideType, int minAge, float topSpeed) {
         attractions.add(new RollerCoaster(name, basePrice, rideType, minAge, topSpeed));
-        return attractions;
     }
 
     //Methods to get Customer
@@ -80,6 +76,7 @@ public class ThemePark {
             }
             System.out.println("The customer: " + finalCustomer);
         } catch (Exception e) {
+
         }
         //Return the found customer.
         return finalCustomer;
@@ -127,7 +124,7 @@ public class ThemePark {
             }
             if (foundAttraction == null) {
                 //When attraction isn't found then throw AttractionNotFound Exception.
-                throw new AttractionNotFound();
+                throw new AttractionNotFoundException();
 
             }
             System.out.println("The ride: " + foundAttraction);
@@ -152,7 +149,7 @@ public class ThemePark {
             }
             if (foundRide == null) {
                 //if attraction isn't found then throw attraction not found exception.
-                throw new AttractionNotFound();
+                throw new AttractionNotFoundException();
             } else {
                 //Once attraction is found then delete the attraction.
                 attractions.remove(foundRide);
@@ -193,7 +190,6 @@ public class ThemePark {
         double averageGentleCapacity = 0;
         for (Attraction gentleAttraction : attractions) {
             if (gentleAttraction.getTypeOfAttraction().equals("GEN")) {
-                gentleAttraction = (GentleAttraction) gentleAttraction;
                 //Count number of Gentle attraction rides.
                 numberOfGentleAttraction = numberOfGentleAttraction + 1;
 
@@ -208,7 +204,7 @@ public class ThemePark {
 
     public double calculateMedianCoasterSpeed() {
         //Get an array of all the Top Speeds
-        double medianCoasterSpeed = 0;
+        double medianCoasterSpeed;
         int numberOfElements = 0;
         double evenElement1 = 0;
         double evenElement2 = 0;
@@ -224,14 +220,16 @@ public class ThemePark {
         }
         //Sort TopSpeed Array
         Collections.sort(TopSpeed);
+        //Calculate median coaster speed.
         if (numberOfElements % 2 == 0) {
+            //f even, calculate appropriately.
             evenElement1 = (double) TopSpeed.get(numberOfElements / 2);
-            evenElement2 = (double) TopSpeed.get((numberOfElements / 2) + 1);
+            evenElement2 = TopSpeed.get((numberOfElements / 2) + 1);
             medianCoasterSpeed = (evenElement1 + evenElement2) / 2;
         } else {
-            medianCoasterSpeed = (double) TopSpeed.get(numberOfElements / 2);
+            //if odd calculate accordingly.
+            medianCoasterSpeed = TopSpeed.get(numberOfElements / 2);
         }
-        //Check the number of elements.
 
         System.out.println("The median coaster speed is: " + medianCoasterSpeed + "mph");
 

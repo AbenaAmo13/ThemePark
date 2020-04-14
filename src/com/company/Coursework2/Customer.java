@@ -2,8 +2,9 @@ package com.company.Coursework2;
 
 /******************************************************************************
 
- File        : Custome Description : Customer class to store information about Customers
- r.java
+ File        : Customer.java
+
+ Description : Customer class to store information about Customers
 
  Date        : 12/02/2020
 

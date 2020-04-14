@@ -3,7 +3,15 @@
   <component name="ChangeListManager">
     <list default="true" id="cd9d066a-4046-4712-b1e6-80cfbc317999" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/company/Coursework2/AgeRestrictionException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/Coursework2/AgeRestrictionException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/company/Coursework2/Attraction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/Coursework2/Attraction.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/company/Coursework2/AttractionNotFound.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/Coursework2/AttractionNotFoundException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/company/Coursework2/Customer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/Coursework2/Customer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/company/Coursework2/CustomerNotFoundException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/Coursework2/CustomerNotFoundException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/company/Coursework2/InsufficientBalanceException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/Coursework2/InsufficientBalanceException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/company/Coursework2/RollerCoaster.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/Coursework2/RollerCoaster.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/company/Coursework2/Simulation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/Coursework2/Simulation.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/company/Coursework2/ThemePark.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/Coursework2/ThemePark.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -43,7 +51,7 @@
       <recent name="C:\Users\abbya\Desktop\Git\ThemePark\src" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.Simulation">
+  <component name="RunManager" selected="Application.ThemePark">
     <configuration name="Customer" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.company.Coursework2.Customer" />
       <module name="ThemePark" />
@@ -111,11 +119,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.Simulation" />
-        <item itemvalue="Application.GentleAttraction" />
         <item itemvalue="Application.ThemePark" />
-        <item itemvalue="Application.Customer" />
+        <item itemvalue="Application.Simulation" />
         <item itemvalue="Application.RollerCoaster" />
+        <item itemvalue="Application.GentleAttraction" />
+        <item itemvalue="Application.Customer" />
       </list>
     </recent_temporary>
   </component>
@@ -205,7 +213,14 @@
       <option name="project" value="LOCAL" />
       <updated>1586834324306</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="Applying all comments and checks before ready for final submission on blackboard.">
+      <created>1586834409712</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1586834409712</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -242,30 +257,30 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="430" y="255" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1/0.0.1366.728@0.0.1366.728" timestamp="1583017968399" />
-    <state x="337" y="0" key="CommitChangelistDialog2" timestamp="1586834401467">
+    <state x="337" y="0" key="CommitChangelistDialog2" timestamp="1586834408758">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="337" y="0" key="CommitChangelistDialog2/0.0.1366.728@0.0.1366.728" timestamp="1586834401467" />
+    <state x="337" y="0" key="CommitChangelistDialog2/0.0.1366.728@0.0.1366.728" timestamp="1586834408758" />
     <state x="463" y="118" key="FileChooserDialogImpl" timestamp="1583870428211">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="463" y="118" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1583870428211" />
-    <state width="1323" height="547" key="GridCell.Tab.0.bottom" timestamp="1586834392702">
+    <state width="1323" height="547" key="GridCell.Tab.0.bottom" timestamp="1586906138584">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="547" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1586834392702" />
-    <state width="1323" height="547" key="GridCell.Tab.0.center" timestamp="1586834392702">
+    <state width="1323" height="547" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1586906138584" />
+    <state width="1323" height="547" key="GridCell.Tab.0.center" timestamp="1586906138584">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="547" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1586834392702" />
-    <state width="1323" height="547" key="GridCell.Tab.0.left" timestamp="1586834392702">
+    <state width="1323" height="547" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1586906138584" />
+    <state width="1323" height="547" key="GridCell.Tab.0.left" timestamp="1586906138583">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="547" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1586834392702" />
-    <state width="1323" height="547" key="GridCell.Tab.0.right" timestamp="1586834392702">
+    <state width="1323" height="547" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1586906138583" />
+    <state width="1323" height="547" key="GridCell.Tab.0.right" timestamp="1586906138584">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="547" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1586834392702" />
+    <state width="1323" height="547" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1586906138584" />
     <state width="1323" height="214" key="GridCell.Tab.1.bottom" timestamp="1584661224141">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
@@ -286,14 +301,14 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="184" y="6" key="SettingsEditor/0.0.1366.728@0.0.1366.728" timestamp="1586832651739" />
-    <state x="275" y="96" key="Vcs.Push.Dialog.v2" timestamp="1585608235881">
+    <state x="275" y="96" key="Vcs.Push.Dialog.v2" timestamp="1586834416322">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="275" y="96" key="Vcs.Push.Dialog.v2/0.0.1366.728@0.0.1366.728" timestamp="1585608235881" />
-    <state x="379" y="187" key="com.intellij.ide.util.TipDialog" timestamp="1586827855769">
+    <state x="275" y="96" key="Vcs.Push.Dialog.v2/0.0.1366.728@0.0.1366.728" timestamp="1586834416322" />
+    <state x="379" y="187" key="com.intellij.ide.util.TipDialog" timestamp="1586905273718">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="379" y="187" key="com.intellij.ide.util.TipDialog/0.0.1366.728@0.0.1366.728" timestamp="1586827855769" />
+    <state x="379" y="187" key="com.intellij.ide.util.TipDialog/0.0.1366.728@0.0.1366.728" timestamp="1586905273718" />
     <state x="492" y="280" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1581771914037">
       <screen x="0" y="0" width="1366" height="728" />
     </state>

@@ -15,12 +15,9 @@ import org.w3c.dom.Attr;
  History     : v 0.01
 
  Copyright   : (c) Abena Serwaa Johene Amo
-
-
-
  ******************************************************************************/
 
-public  abstract class Attraction {
+public abstract class Attraction {
     //Declare variables and hafve accessors and mutators.
     protected String name;
 
@@ -48,18 +45,23 @@ public  abstract class Attraction {
     public String getTypeOfAttraction() {
         return typeOfAttraction;
     }
-    public void setTypeOfAttraction(String typeOfAttraction){}
+
+    public void setTypeOfAttraction(String typeOfAttraction) {
+    }
 
     public int getOffPeakPrice() {
         return basePrice;
     }
-    public Attraction(){}
 
-    public Attraction(String name, int basePrice, String typeOfAttraction){
-        this.name=name;
-        this.basePrice=basePrice;
-        this.typeOfAttraction=typeOfAttraction;
+    public Attraction() {
     }
+
+    public Attraction(String name, int basePrice, String typeOfAttraction) {
+        this.name = name;
+        this.basePrice = basePrice;
+        this.typeOfAttraction = typeOfAttraction;
+    }
+
     @Override
     public String toString() {
         return name + " " + basePrice + " " + typeOfAttraction;
