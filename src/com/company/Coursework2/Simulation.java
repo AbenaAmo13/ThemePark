@@ -46,6 +46,7 @@ public class Simulation {
         int minAge;
         float topSpeed;
         ThemePark newPark = new ThemePark();
+        //Set the name of the Theme Park.
         newPark.setParkName("FunTown");
         try {
             BufferedReader customerInput = new BufferedReader(new FileReader("customers.txt"));
@@ -85,6 +86,8 @@ public class Simulation {
                     discountType = customerDetails[4];
 
                 }
+                //Add customers to the theme Park using the Add Customers method.
+                //Note that the customer details are the ones that have been read from the file.
                 newPark.AddCustomers(accountNo, customerName, age, accountBalance, discountType);
             }
 
@@ -93,6 +96,7 @@ public class Simulation {
                 String[] attractionDetails;
                 attractionDetails = attractionLine.split("@");
                 int numberofElementAttractions = attractionDetails.length;
+                //Based on the type of attraction it is add ride to the theme park accordingly.
                 typeOfAttraction = attractionDetails[2];
                 switch (typeOfAttraction) {
                     case "TRA":
@@ -100,6 +104,7 @@ public class Simulation {
                         basePrice = Integer.parseInt(attractionDetails[1]);
                         typeOfAttraction = attractionDetails[2];
                         distance = Integer.parseInt(attractionDetails[3]);
+                        //Add transport attractions to the theme park object
                         newPark.AddTransportAttraction(attractionName, basePrice, typeOfAttraction, distance);
                         break;
                     case "GEN":
@@ -107,9 +112,11 @@ public class Simulation {
                         basePrice = Integer.parseInt(attractionDetails[1]);
                         typeOfAttraction = attractionDetails[2];
                         capacity = Integer.parseInt(attractionDetails[3]);
+                        //Add gentle attractions to the theme park object
                         newPark.AddGentleAttraction(attractionName, basePrice, typeOfAttraction, capacity);
                         break;
                     case "ROL":
+                        //Using for loop to increase the size of the attractionDetails.
                         for (int i = 0; i < attractionDetails.length; i++) {
                             RollerCoaster[i] = attractionDetails[i];
                         }
@@ -118,18 +125,20 @@ public class Simulation {
                         typeOfAttraction = attractionDetails[2];
                         minAge = Integer.parseInt(attractionDetails[3]);
                         topSpeed = Float.parseFloat(attractionDetails[4]);
+                        //Add rollercoaster rides to the theme park object.
                         newPark.AddRollerCoasterRides(attractionName, basePrice, typeOfAttraction, minAge, topSpeed);
                         break;
                 }
             }
         } catch (FileNotFoundException e) {
+            //Print message if file is not found.
             System.out.println("File is not Found.Please put the right file.");
         }
         return newPark;
     }
 
 
-    //Simulate method
+    //Simulate method to perform transactions in the trasnaction files.
     public static void Simulate(ThemePark newThemePark) throws IOException {
         newThemePark = createThemePark();
         //Read transaction file.
@@ -162,39 +171,51 @@ public class Simulation {
                 instruction = specificTransactionScanner.next();
                 Attraction transactionAttraction = null;
                 Customer transactionCustomer = null;
-                //Execute the transactions.
+                //Execute the transactions based on the specific word.
                 switch (instruction) {
+                    //If use attraction transaction
                     case "USE_ATTRACTION":
                         System.out.println("The transaction is: " + transactions);
                         typeOfPrice = specificTransactionScanner.next();
                         accountNumber = specificTransactionScanner.next();
                         rideName = specificTransactionScanner.next();
-
+                        //Get all necessary information related to the transaction.
                         transactionAttraction = newThemePark.getAttraction(rideName);
                         basePrice = transactionAttraction.getBasePrice();
                         transactionCustomer = newThemePark.getCustomer(accountNumber);
                         beforeTransactionBalance = transactionCustomer.getAccountBalance();
                         personalDiscount = transactionCustomer.getPersonalDiscount();
                         typeOfRide = transactionAttraction.getTypeOfAttraction();
+                        //Determine whether standard or peak price.
+                        //If Standard Price
                         if (typeOfPrice.equals("STANDARD_PRICE")) {
+                            //Determine which discount is available for the customer (if the customer has one).
+
                             switch (personalDiscount) {
                                 case "None":
                                     basePrice = basePrice;
                                     if (typeOfRide.equals("ROL")) {
                                         RollerCoaster rol = (RollerCoaster) transactionAttraction;
                                         minAge = rol.getMinAge();
+                                        //Apply use attraction method for rollercoaster after getting necessary information to do so.
                                         transactionCustomer.useAttraction(basePrice, minAge);
                                         accountBalance = transactionCustomer.getAccountBalance();
+                                        //If the transaction balance doesn't change that means error was thrown hence
                                         if (beforeTransactionBalance == accountBalance) {
+                                            //Do not add transaction to the total final profit.
                                             finalProfit = finalProfit;
                                             System.out.println("Total Profit: " + finalProfit);
                                             System.out.println("\n");
-                                        } else if (beforeTransactionBalance != accountBalance) {
+                                        } //If account balance after transaction is different from before transaction was executed
+                                        //That means that transaction was successful hence
+                                        else if (beforeTransactionBalance != accountBalance) {
+                                            //Add basePrice to the final profit.
                                             finalProfit = finalProfit + basePrice;
                                             System.out.println("Total Profit: " + finalProfit);
                                             System.out.println("\n");
                                         }
                                     } else {
+                                        //Once it is not a roller coaster, use the other use attraction method.
                                         transactionCustomer.useAttraction(basePrice);
                                         accountBalance = transactionCustomer.getAccountBalance();
                                         if (beforeTransactionBalance == accountBalance) {
@@ -210,10 +231,12 @@ public class Simulation {
 
                                     break;
                                 case "STUDENT":
+                                    //Apply the student discount
                                     basePrice = (int) (0.9 * basePrice);
                                     if (typeOfRide.equals("ROL")) {
                                         RollerCoaster rol = (RollerCoaster) transactionAttraction;
                                         minAge = rol.getMinAge();
+                                        // Apply Use attraction method for rollercoaster
                                         transactionCustomer.useAttraction(basePrice, minAge);
                                         accountBalance = transactionCustomer.getAccountBalance();
                                         if (beforeTransactionBalance == accountBalance) {
@@ -226,6 +249,7 @@ public class Simulation {
                                             System.out.println("\n");
                                         }
                                     } else {
+                                        //Apply use attraction method for the other rides.
                                         transactionCustomer.useAttraction(basePrice);
                                         accountBalance = transactionCustomer.getAccountBalance();
                                         if (beforeTransactionBalance == accountBalance) {
@@ -241,12 +265,15 @@ public class Simulation {
 
                                     break;
                                 case "FAMILY":
+                                    //Apply family discount on base Price.
                                     basePrice = (int) (0.85 * basePrice);
                                     if (typeOfRide.equals("ROL")) {
                                         RollerCoaster rol = (RollerCoaster) transactionAttraction;
                                         minAge = rol.getMinAge();
+                                        //Apply use attraction for rollercoaster.
                                         transactionCustomer.useAttraction(basePrice, minAge);
                                     } else {
+                                        //Apply use attraction for the other rides.
                                         transactionCustomer.useAttraction(basePrice);
 
                                     }
@@ -264,30 +291,41 @@ public class Simulation {
                                     break;
 
                             }
-                            //Get the personal Discount type
-                            //For off Peak times
+
+                            //Based on the typeofRide apply the personal discount
                         } else {
+                            //Get typeOfRide and place it in variable name "typeOfRide"
+                            //Based on that apply the off peak price on the base price.
+                            //For rollercoasters, execute use attractions.
                             if (typeOfRide.equals("ROL")) {
                                 RollerCoaster rol = (RollerCoaster) transactionAttraction;
+                                //Apply off peak price first.
                                 basePrice = rol.getOffPeakPrice();
-
+                                //Apply discounts if there are any.
                                 switch (personalDiscount) {
                                     case "None":
                                         basePrice = basePrice;
                                         minAge = rol.getMinAge();
+                                        //Apply appropriate use attraction.
                                         transactionCustomer.useAttraction(basePrice, minAge);
                                         accountBalance = transactionCustomer.getAccountBalance();
+                                        //Check if there was a change in the customers' balance.
                                         if (beforeTransactionBalance == accountBalance) {
+                                            //No change then exception was thrown.
+                                            // base price won't be added to final profit.
                                             finalProfit = finalProfit;
                                             System.out.println(finalProfit);
                                             System.out.println("\n");
-                                        } else if (beforeTransactionBalance != accountBalance) {
+                                        } //Change in account balance means transaction was successful.
+                                        else if (beforeTransactionBalance != accountBalance) {
+                                            //Add baseprice to finalprfit.
                                             finalProfit = finalProfit + basePrice;
                                             System.out.println("Total profit: " + finalProfit);
                                             System.out.println("\n");
                                         }
                                         break;
                                     case "STUDENT":
+                                        //Apply student discount.
                                         basePrice = (int) (0.9 * basePrice);
                                         minAge = rol.getMinAge();
                                         transactionCustomer.useAttraction(basePrice, minAge);
@@ -422,6 +460,7 @@ public class Simulation {
 
                         }
                         break;
+                        //Execute add funds transaction.
                     case "ADD_FUNDS":
                         System.out.println("The transaction is: " + transactions);
                         accountNumber = specificTransactionScanner.next();
@@ -431,7 +470,7 @@ public class Simulation {
                         System.out.println("\n");
 
                         break;
-
+                    //Exeucte new customer transaction
                     case "NEW_CUSTOMER":
                         System.out.println("The transaction is: " + transactions);
                         accountNumber = specificTransactionScanner.next();
@@ -441,6 +480,7 @@ public class Simulation {
                         if (specificTransactionScanner.hasNext()) {
                             personalDiscount = specificTransactionScanner.next();
                             newThemePark.AddCustomers(accountNumber, customerName, age, accountBalance, personalDiscount);
+                            //Apply getCustomer method
                             transactionCustomer = newThemePark.getCustomer(accountNumber);
                             System.out.println("\n");
 
