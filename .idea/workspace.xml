@@ -3,11 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="cd9d066a-4046-4712-b1e6-80cfbc317999" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/company/Coursework2/Customer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/Coursework2/Customer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/company/Coursework2/GentleAttraction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/Coursework2/GentleAttraction.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/company/Coursework2/Simulation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/Coursework2/Simulation.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/company/Coursework2/ThemePark.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/Coursework2/ThemePark.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/company/Coursework2/TransportAttraction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/Coursework2/TransportAttraction.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -202,7 +198,14 @@
       <option name="project" value="LOCAL" />
       <updated>1585608086222</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="Applying all comments and checks before ready for final submission on blackboard.">
+      <created>1586834324306</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1586834324306</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -227,7 +230,8 @@
     <MESSAGE value="Completed createThemePark(): THE VISION" />
     <MESSAGE value="Almost done left with completing the total" />
     <MESSAGE value="complete" />
-    <option name="LAST_COMMIT_MESSAGE" value="complete" />
+    <MESSAGE value="Applying all comments and checks before ready for final submission on blackboard." />
+    <option name="LAST_COMMIT_MESSAGE" value="Applying all comments and checks before ready for final submission on blackboard." />
   </component>
   <component name="WindowStateProjectService">
     <state x="0" y="129" key="#com.intellij.ide.util.MemberChooser" timestamp="1583512620393">
@@ -238,30 +242,30 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="430" y="255" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1/0.0.1366.728@0.0.1366.728" timestamp="1583017968399" />
-    <state x="337" y="0" key="CommitChangelistDialog2" timestamp="1585608114800">
+    <state x="337" y="0" key="CommitChangelistDialog2" timestamp="1586834401467">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="337" y="0" key="CommitChangelistDialog2/0.0.1366.728@0.0.1366.728" timestamp="1585608114800" />
+    <state x="337" y="0" key="CommitChangelistDialog2/0.0.1366.728@0.0.1366.728" timestamp="1586834401467" />
     <state x="463" y="118" key="FileChooserDialogImpl" timestamp="1583870428211">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="463" y="118" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1583870428211" />
-    <state width="1323" height="547" key="GridCell.Tab.0.bottom" timestamp="1586831249664">
+    <state width="1323" height="547" key="GridCell.Tab.0.bottom" timestamp="1586834392702">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="547" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1586831249664" />
-    <state width="1323" height="547" key="GridCell.Tab.0.center" timestamp="1586831249663">
+    <state width="1323" height="547" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1586834392702" />
+    <state width="1323" height="547" key="GridCell.Tab.0.center" timestamp="1586834392702">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="547" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1586831249663" />
-    <state width="1323" height="547" key="GridCell.Tab.0.left" timestamp="1586831249663">
+    <state width="1323" height="547" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1586834392702" />
+    <state width="1323" height="547" key="GridCell.Tab.0.left" timestamp="1586834392702">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="547" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1586831249663" />
-    <state width="1323" height="547" key="GridCell.Tab.0.right" timestamp="1586831249663">
+    <state width="1323" height="547" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1586834392702" />
+    <state width="1323" height="547" key="GridCell.Tab.0.right" timestamp="1586834392702">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="547" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1586831249663" />
+    <state width="1323" height="547" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1586834392702" />
     <state width="1323" height="214" key="GridCell.Tab.1.bottom" timestamp="1584661224141">
       <screen x="0" y="0" width="1366" height="728" />
     </state>

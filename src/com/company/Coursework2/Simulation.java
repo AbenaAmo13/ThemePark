@@ -158,7 +158,6 @@ public class Simulation {
         int finalProfit = 0;
         String fileName = "transactions.txt";
         int basePrice = 0;
-        File file = new File(fileName);
         //ArrayList to store information for all Use Attraction instructions.
         ArrayList transactionsArray = new ArrayList();
         try {
