@@ -11,3 +11,4 @@ The application also implements a main method class that does the following:
 This application was developed using Java
 
 ## Usage
+You can clone the repository in any terminal by typing in the following command 	`git clone https://github.com/AbenaAmo13/ThemePark/ ` 
