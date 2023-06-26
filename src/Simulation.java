@@ -1,5 +1,3 @@
-package com.company.Coursework2;
-
 import java.io.*;
 import java.util.Scanner;
 
@@ -122,6 +120,7 @@ public class Simulation {
         } catch (FileNotFoundException e) {
             //Print message if file is not found.
             System.out.println("File is not Found.Please put the right file.");
+            e.printStackTrace();
         }
         return newPark;
     }

@@ -1,5 +1,3 @@
-package com.company.Coursework2;
-
 public
 class AttractionNotFoundException extends Exception {
     public AttractionNotFoundException() {

@@ -1,5 +1,3 @@
-package com.company.Coursework2;
-
 /******************************************************************************
 
  File        : TransportAttraction.java

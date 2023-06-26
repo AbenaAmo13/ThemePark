@@ -1,5 +1,3 @@
-package com.company.Coursework2;
-
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Collections;
