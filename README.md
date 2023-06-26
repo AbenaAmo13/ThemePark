@@ -12,7 +12,8 @@ This application was developed using Java
 
 ## Usage
 You can clone the repository in any terminal by typing in the following command 
-`git clone https://github.com/AbenaAmo13/ThemePark/ ` and then run the Simulation class. 
+`git clone https://github.com/AbenaAmo13/ThemePark/ `.
+On Terminal, run `javac src/*.java` and then run `java -cp src/ Simulation`
 
 
 
