@@ -11,8 +11,7 @@ The application also has a class named `Simulation` that implements the main met
 This application was developed using Java
 
 ## Usage
-You can clone the repository in any terminal by typing in the following command 
-`git clone https://github.com/AbenaAmo13/ThemePark/ `.
+You can clone the repository in any terminal by typing in the following command `git clone https://github.com/AbenaAmo13/ThemePark/ `.
 On Terminal, run `javac src/*.java` and then run `java -cp src/ Simulation`
 
 
